@@ -1,0 +1,58 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: hsl(65, 100%, 98%);
+}
+
+input {
+    position: relative;
+    width: 680px;
+    height: 280px;
+    -webkit-appearance: none;
+    outline: none;
+    background-image: url(img/Dia.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 150px;
+    cursor: pointer;
+    transition: all .6s ease;
+    box-shadow: 0 50px 20px -30px #d1cfcf;
+}
+
+input:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    width: 280px;
+    border-radius: 50%;
+    height: 260px;
+    left: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 2px #c5c5c5;
+    transition: all .8s ease;
+}
+
+input:checked {
+    background-image: url(img/noche.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+input:checked:before {
+    transform: translateX(380px);
+}
